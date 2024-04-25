@@ -1,12 +1,13 @@
 package com.example.demo;
 
 public class User {
-    public User(int userId, String userName, String email, String password, Address address) {
+    public User(int userId, String userName, String email, String password,int age, Address address) {
         this.userId = userId;
         this.userName = userName;
         this.email = email;
         this.password = password;
         this.address = address;
+        this.age = age;
     }
 
     private int userId;
@@ -14,6 +15,15 @@ public class User {
     private String email;
     private String password;
     private Address address;
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public int getUserId() {
         return userId;
