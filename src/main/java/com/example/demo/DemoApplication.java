@@ -35,11 +35,7 @@ public class DemoApplication {
 		// merge two list
 		mergedList.addAll(list1);
 		mergedList.addAll(list2);
-
-
 		mergedList.forEach(System.out::println);
-
-
 
 	}
 

@@ -3,3 +3,10 @@ git add {files}
 git commit -m {message}
 git remote add java-interview-prep https://github.com/KalingaYapa/java-interview-prep
 git push --set-upstream java-interview-prep master
+
+###########################
+gh auth login 
+gh auth token
+gh repo list
+gh repo create java-interview-prep --public
+
