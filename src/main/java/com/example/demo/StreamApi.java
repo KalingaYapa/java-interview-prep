@@ -35,6 +35,6 @@ public class StreamApi {
 
         // filter users who older than 40
         List<User> usersOlderThan40 = userList.stream().filter(user -> user.getAge() > 40).collect(Collectors.toList());
-        
+
     }
 }
