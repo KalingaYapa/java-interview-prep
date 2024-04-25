@@ -11,8 +11,8 @@ public class StreamApi {
         Address address1 = new Address(1,"lane1","Digana","Sri Lanka");
         Address address2 = new Address(2,"lane2","Menikhinna","Sri Lanka");
         Address address3 = new Address(3,"lane3","Theldeniya","Sri Lanka");
-        Address address4 = new Address(3,"lane4","PJ","Malaysia");
-        Address address5 = new Address(3,"lane5","Johor","Malaysia");
+        Address address4 = new Address(4,"lane4","PJ","Malaysia");
+        Address address5 = new Address(5,"lane5","Johor","Malaysia");
 
 
         User user1 = new User(1, "kk","kk@gmail.com","123",32,address1);
@@ -31,10 +31,17 @@ public class StreamApi {
         //userList.stream().forEach(x-> System.out.println(x.getEmail()));
 
         // store emails into the new list
-        List<String> userEmailList = userList.stream().map(User::getEmail).collect(Collectors.toList());
+        List<String> userEmailList = userList.stream().map(User::getEmail).toList();
 
         // filter users who older than 40
-        List<User> usersOlderThan40 = userList.stream().filter(user -> user.getAge() > 40).collect(Collectors.toList());
+        List<User> usersOlderThan40 = userList.stream().filter(user -> user.getAge() > 40)
+                .toList();
+
+        // get List of address which only for users who older 40
+        List<Address> addressListForUserOlder40 = userList.stream().
+                filter(user -> user.getAge() > 40).map(User::getAddress).toList();
+
+        addressListForUserOlder40.forEach(System.out::println);
 
     }
 }
