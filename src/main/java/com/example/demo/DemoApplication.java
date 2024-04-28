@@ -26,8 +26,7 @@ public class DemoApplication {
 		List<String> mergedList = new ArrayList<>();
 
 		// get common elements to the list
-		List<String> list3 = list1.stream().filter(list2::contains).
-				collect(Collectors.toList());
+		List<String> list3 = list1.stream().filter(list2::contains).toList();
 
 		// sort a List
 		Collections.sort(list1);
