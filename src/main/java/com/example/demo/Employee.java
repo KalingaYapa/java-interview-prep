@@ -1,13 +1,15 @@
 package com.example.demo;
 
-public class User {
-    public User(int userId, String userName, String email, String password,int age, Address address) {
+public class Employee {
+    public Employee(int userId, String userName, String email, String password, int age, Address address, int departmentId, double salary) {
         this.userId = userId;
         this.userName = userName;
         this.email = email;
         this.password = password;
         this.address = address;
         this.age = age;
+        this.departmentId = departmentId;
+        this.salary = salary;
     }
 
     private int userId;
@@ -16,6 +18,24 @@ public class User {
     private String password;
     private Address address;
     private int age;
+    private int departmentId;
+    private Double salary;
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
+
+    public int getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(int departmentId) {
+        this.departmentId = departmentId;
+    }
 
     public int getAge() {
         return age;
@@ -73,6 +93,8 @@ public class User {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", address=" + address +
+                ", departmentId=" + departmentId +
+                ", salary=" + salary +
                 '}';
     }
 }
